@@ -121,10 +121,7 @@ export function RegisterPage() {
         </div>
 
         {/* Right — register card */}
-        <div
-          className="w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up relative"
-          className="card"
-        >
+        <div className="card w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up">
           {/* Card inner glow */}
           <div
             className="absolute top-0 left-0 right-0 h-32 rounded-t-3xl pointer-events-none"

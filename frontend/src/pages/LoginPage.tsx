@@ -119,10 +119,7 @@ export function LoginPage() {
         </div>
 
         {/* Right — login card */}
-        <div
-          className="w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up"
-          className="card"
-        >
+        <div className="card w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up">
           {/* Card inner glow */}
           <div
             className="absolute top-0 left-0 right-0 h-32 rounded-t-3xl pointer-events-none"

@@ -47,10 +47,7 @@ export function Modal({
       />
 
       {/* Modal panel */}
-      <div
-        className={`relative w-full ${maxWidth} rounded-2xl animate-scale-in overflow-hidden`}
-        className="card"
-      >
+      <div className={`card relative w-full ${maxWidth} rounded-2xl animate-scale-in overflow-hidden`}>
         {/* Top glow */}
         <div
           className="absolute top-0 left-0 right-0 h-24 pointer-events-none"
