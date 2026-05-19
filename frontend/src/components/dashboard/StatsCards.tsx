@@ -51,20 +51,17 @@ export function StatsCards({ stats }: StatsCardsProps) {
       {cards.map((card, index) => (
         <div
           key={card.key}
-          className="relative overflow-hidden rounded-2xl p-6 animate-slide-up transition-all duration-300 group cursor-default"
+          className="card relative overflow-hidden rounded-2xl p-6 animate-slide-up transition-all duration-300 group cursor-default"
           style={{
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.07)',
-            backdropFilter: 'blur(20px)',
             animationDelay: `${index * 80}ms`,
           }}
           onMouseEnter={e => {
-            (e.currentTarget as HTMLElement).style.border = `1px solid rgba(139,92,246,0.25)`;
+            (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent-violet)';
             (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)';
-            (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(139,92,246,0.1)`;
+            (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 40px var(--glow-violet)`;
           }}
           onMouseLeave={e => {
-            (e.currentTarget as HTMLElement).style.border = '1px solid rgba(255,255,255,0.07)';
+            (e.currentTarget as HTMLElement).style.borderColor = 'var(--border-subtle)';
             (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
             (e.currentTarget as HTMLElement).style.boxShadow = '';
           }}

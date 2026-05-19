@@ -14,10 +14,7 @@ export function RecentActivity({ leads }: RecentActivityProps) {
 
   if (leads.length === 0) {
     return (
-      <div
-        className="rounded-2xl overflow-hidden"
-        className="card"
-      >
+      <div className="card rounded-2xl overflow-hidden">
         <div
           className="px-6 py-4"
           style={{ borderBottom: '1px solid var(--border-subtle)' }}
@@ -36,10 +33,7 @@ export function RecentActivity({ leads }: RecentActivityProps) {
   }
 
   return (
-    <div
-      className="rounded-2xl overflow-hidden"
-      className="card"
-    >
+    <div className="card rounded-2xl overflow-hidden">
       <div
         className="px-6 py-4 flex items-center justify-between"
         style={{ borderBottom: '1px solid var(--border-subtle)' }}
@@ -62,7 +56,7 @@ export function RecentActivity({ leads }: RecentActivityProps) {
             onClick={() => navigate(`/leads/${lead._id}`)}
             className="flex w-full items-center gap-4 px-6 py-4 text-left transition-all duration-200"
             style={{
-              borderBottom: idx < leads.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none',
+              borderBottom: idx < leads.length - 1 ? '1px solid var(--border-subtle)' : 'none',
             }}
             onMouseEnter={e =>
               ((e.currentTarget as HTMLElement).style.background = 'rgba(139,92,246,0.06)')
