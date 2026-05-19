@@ -35,6 +35,7 @@ const leadSchema = new Schema<ILeadDocument>(
     timestamps: true,
     toJSON: {
       transform(_doc, ret) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         delete (ret as any).__v;
         return ret;
       },
