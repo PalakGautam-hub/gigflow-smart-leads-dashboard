@@ -57,10 +57,7 @@ export function DashboardPage() {
         </div>
 
         {/* Lead Distribution — 1/3 width */}
-        <div
-          className="rounded-2xl p-6"
-          className="card"
-        >
+        <div className="card p-6">
           <h3 className="text-base font-semibold mb-5" style={{ color: 'var(--text-primary)' }}>
             Lead Distribution
           </h3>
