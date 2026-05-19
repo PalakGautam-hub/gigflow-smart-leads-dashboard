@@ -72,7 +72,7 @@ A production-grade full-stack MERN application for managing and tracking sales l
 
 ```
 gigflow-smart-leads-dashboard/
-├── client/                      # Frontend (React + Vite)
+├── frontend/                    # Frontend (React + Vite)
 │   ├── src/
 │   │   ├── api/                 # API layer (Axios)
 │   │   ├── components/
@@ -89,7 +89,7 @@ gigflow-smart-leads-dashboard/
 │   │   └── utils/               # Utility functions
 │   ├── Dockerfile
 │   └── package.json
-├── server/                      # Backend (Express)
+├── backend/                     # Backend (Express)
 │   ├── src/
 │   │   ├── config/              # DB & env config
 │   │   ├── controllers/         # Route controllers
@@ -124,7 +124,7 @@ cd gigflow-smart-leads-dashboard
 
 ### 2. Backend Setup
 ```bash
-cd server
+cd backend
 npm install
 cp .env.example .env    # Edit .env with your MongoDB URI
 npm run dev
@@ -132,7 +132,7 @@ npm run dev
 
 ### 3. Frontend Setup
 ```bash
-cd client
+cd frontend
 npm install
 cp .env.example .env
 npm run dev
@@ -140,7 +140,7 @@ npm run dev
 
 ### 4. Seed Database
 ```bash
-cd server
+cd backend
 npm run seed
 ```
 
@@ -165,13 +165,13 @@ This starts:
 
 ### Frontend → Vercel
 1. Connect your GitHub repository
-2. Set root directory to `client`
+2. Set root directory to `frontend`
 3. Framework: Vite
 4. Add environment variable: `VITE_API_URL=https://your-api.onrender.com/api`
 
 ### Backend → Render
 1. Create a new Web Service
-2. Set root directory to `server`
+2. Set root directory to `backend`
 3. Build command: `npm install && npm run build`
 4. Start command: `npm start`
 5. Add environment variables from `.env.example`
