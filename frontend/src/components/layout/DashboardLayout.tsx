@@ -20,28 +20,22 @@ export function DashboardLayout() {
     <div className="flex h-screen overflow-hidden relative" style={{ backgroundColor: 'var(--bg-base)' }}>
       {/* ── Deep-space background orbs ── */}
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 60% at 50% -20%, rgba(88, 28, 135, 0.55) 0%, transparent 70%), ' +
-            'radial-gradient(ellipse 60% 50% at 90% 80%, rgba(139, 92, 246, 0.25) 0%, transparent 60%), ' +
-            'radial-gradient(ellipse 50% 40% at 10% 90%, rgba(168, 85, 247, 0.2) 0%, transparent 60%), ' +
-            '#0d0a1a',
-        }}
+        className="absolute inset-0 z-0 transition-all duration-300"
+        style={{ background: 'var(--app-bg-gradient)' }}
       />
       {/* Subtle animated blob top-right */}
       <div
-        className="absolute top-[-15%] right-[-10%] w-[55%] h-[55%] rounded-full pointer-events-none z-0 animate-float"
+        className="absolute top-[-15%] right-[-10%] w-[55%] h-[55%] rounded-full pointer-events-none z-0 animate-float transition-all duration-300"
         style={{
-          background: 'radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%)',
+          background: 'var(--orb-1)',
           filter: 'blur(60px)',
         }}
       />
       {/* Pink accent blob bottom-left */}
       <div
-        className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[45%] rounded-full pointer-events-none z-0"
+        className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[45%] rounded-full pointer-events-none z-0 transition-all duration-300"
         style={{
-          background: 'radial-gradient(circle, rgba(236,72,153,0.12) 0%, transparent 70%)',
+          background: 'var(--orb-2)',
           filter: 'blur(70px)',
         }}
       />

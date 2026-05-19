@@ -42,29 +42,25 @@ export function RegisterPage() {
       className="flex min-h-screen items-center justify-center relative overflow-hidden"
       style={{ backgroundColor: 'var(--bg-base)' }}
     >
-      {/* ── Background orbs ── */}
+      {/* ── Deep-space background orbs ── */}
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 90% 70% at 50% -10%, rgba(88,28,135,0.7) 0%, transparent 65%), ' +
-            'radial-gradient(ellipse 60% 50% at 100% 80%, rgba(139,92,246,0.3) 0%, transparent 55%), ' +
-            'radial-gradient(ellipse 50% 40% at -5% 60%, rgba(168,85,247,0.25) 0%, transparent 55%), ' +
-            '#0d0a1a',
-        }}
+        className="absolute inset-0 z-0 transition-all duration-300"
+        style={{ background: 'var(--app-bg-gradient)' }}
       />
+      {/* Orb 1 */}
       <div
-        className="absolute top-[10%] right-[5%] w-[45%] h-[45%] rounded-full pointer-events-none z-0 animate-float"
+        className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full pointer-events-none z-0 animate-float transition-all duration-300"
         style={{
-          background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)',
-          filter: 'blur(70px)',
-        }}
-      />
-      <div
-        className="absolute bottom-[5%] left-[5%] w-[35%] h-[40%] rounded-full pointer-events-none z-0"
-        style={{
-          background: 'radial-gradient(circle, rgba(236,72,153,0.15) 0%, transparent 70%)',
+          background: 'var(--orb-1)',
           filter: 'blur(80px)',
+        }}
+      />
+      {/* Orb 2 */}
+      <div
+        className="absolute bottom-[-15%] right-[-5%] w-[60%] h-[60%] rounded-full pointer-events-none z-0 transition-all duration-300"
+        style={{
+          background: 'var(--orb-2)',
+          filter: 'blur(100px)',
         }}
       />
 

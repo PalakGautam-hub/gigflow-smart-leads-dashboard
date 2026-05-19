@@ -44,21 +44,29 @@
 
 /* ── Design tokens ─────────────────────────────────────── */
 :root {
-  /* LIGHT THEME */
-  --bg-base:        #faf5ff;
-  --bg-sidebar:     #f3e8ff;
-  --bg-card:        rgba(255, 255, 255, 0.7);
-  --bg-card-hover:  rgba(255, 255, 255, 1);
-  --border-subtle:  rgba(139, 92, 246, 0.15);
-  --border-glow:    rgba(139, 92, 246, 0.3);
-  --text-primary:   #0f172a;
-  --text-secondary: #334155;
-  --text-muted:     #64748b;
+  /* LIGHT THEME (Liquid Glass UI) */
+  --bg-base:        #fdfbf7;
+  --bg-sidebar:     rgba(255, 255, 255, 0.4);
+  --bg-card:        rgba(255, 255, 255, 0.5);
+  --bg-card-hover:  rgba(255, 255, 255, 0.8);
+  --border-subtle:  rgba(255, 255, 255, 0.8);
+  --border-glow:    rgba(255, 255, 255, 1);
+  --text-primary:   #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted:     #9ca3af;
   --accent-violet:  #8b5cf6;
   --accent-purple:  #a855f7;
   --accent-pink:    #ec4899;
-  --glow-violet:    rgba(139, 92, 246, 0.1);
-  --bg-input:       #ffffff;
+  --glow-violet:    rgba(139, 92, 246, 0.15);
+  --bg-input:       rgba(255, 255, 255, 0.6);
+
+  /* Backgrounds */
+  --app-bg-gradient: radial-gradient(ellipse at top left, rgba(252, 231, 243, 0.8) 0%, transparent 50%),
+                     radial-gradient(ellipse at bottom right, rgba(224, 242, 254, 0.8) 0%, transparent 50%),
+                     radial-gradient(ellipse at center, rgba(243, 232, 255, 0.8) 0%, transparent 50%),
+                     #fdfbf7;
+  --orb-1: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
+  --orb-2: radial-gradient(circle, rgba(56,189,248,0.2) 0%, transparent 70%);
 }
 
 .dark {
@@ -77,6 +85,14 @@
   --accent-pink:    #ec4899;
   --glow-violet:    rgba(139, 92, 246, 0.25);
   --bg-input:       rgba(255, 255, 255, 0.06);
+
+  /* Backgrounds */
+  --app-bg-gradient: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(88, 28, 135, 0.55) 0%, transparent 70%),
+                     radial-gradient(ellipse 60% 50% at 90% 80%, rgba(139, 92, 246, 0.25) 0%, transparent 60%),
+                     radial-gradient(ellipse 50% 40% at 10% 90%, rgba(168, 85, 247, 0.2) 0%, transparent 60%),
+                     #0d0a1a;
+  --orb-1: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%);
+  --orb-2: radial-gradient(circle, rgba(236,72,153,0.12) 0%, transparent 70%);
 }
 
 @layer components {
