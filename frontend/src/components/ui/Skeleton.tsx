@@ -6,7 +6,7 @@ export function Skeleton({ className = '' }: SkeletonProps) {
   return (
     <div
       className={`animate-pulse rounded-lg ${className}`}
-      style={{ background: 'rgba(139,92,246,0.08)' }}
+      style={{ background: 'var(--glow-violet)' }}
     />
   );
 }
@@ -22,7 +22,7 @@ export function TableSkeleton({ rows = 5 }: { rows?: number }) {
         >
           <div
             className="h-9 w-9 rounded-full animate-pulse flex-shrink-0"
-            style={{ background: 'rgba(139,92,246,0.12)' }}
+            style={{ background: 'var(--border-glow)' }}
           />
           <div className="flex-1 space-y-2">
             <Skeleton className="h-3.5 w-1/3" />

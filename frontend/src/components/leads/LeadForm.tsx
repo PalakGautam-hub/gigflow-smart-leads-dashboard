@@ -104,7 +104,7 @@ export function LeadForm({ lead, onSubmit, onCancel, isLoading = false }: LeadFo
       {/* Actions */}
       <div
         className="flex items-center justify-end gap-3 pt-4"
-        style={{ borderTop: '1px solid rgba(139,92,246,0.12)' }}
+        style={{ borderTop: '1px solid var(--border-subtle)' }}
       >
         <button type="button" onClick={onCancel} className="btn-secondary" disabled={isLoading}>
           Cancel

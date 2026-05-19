@@ -52,7 +52,7 @@ function App() {
         toastOptions={{
           duration: 4000,
           style: {
-            background: 'rgba(26, 19, 48, 0.95)',
+            background: 'var(--bg-sidebar)',
             color: '#e2d9f3',
             borderRadius: '12px',
             border: '1px solid rgba(139, 92, 246, 0.25)',

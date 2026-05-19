@@ -17,7 +17,7 @@ export function DashboardLayout() {
     (location.pathname.startsWith('/leads/') ? 'Lead Details' : 'Dashboard');
 
   return (
-    <div className="flex h-screen overflow-hidden relative" style={{ background: '#0d0a1a' }}>
+    <div className="flex h-screen overflow-hidden relative" style={{ backgroundColor: 'var(--bg-base)' }}>
       {/* ── Deep-space background orbs ── */}
       <div
         className="absolute inset-0 z-0"

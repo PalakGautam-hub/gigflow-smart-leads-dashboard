@@ -40,7 +40,7 @@ export function LoginPage() {
   return (
     <div
       className="flex min-h-screen items-center justify-center relative overflow-hidden"
-      style={{ background: '#0d0a1a' }}
+      style={{ backgroundColor: 'var(--bg-base)' }}
     >
       {/* ── Background orbs ── */}
       <div
@@ -76,11 +76,7 @@ export function LoginPage() {
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
-            style={{
-              background: 'rgba(139,92,246,0.12)',
-              border: '1px solid rgba(139,92,246,0.3)',
-              color: '#a78bfa',
-            }}
+            style={{ background: 'var(--border-glow)' }}
           >
             <Zap size={12} />
             Next-Gen CRM Platform
@@ -99,10 +95,10 @@ export function LoginPage() {
               }}
             >Flow</span>
             <br />
-            <span style={{ color: '#c4b5fd' }}>Smart Leads</span>
+            <span style={{ color: 'var(--accent-purple)' }}>Smart Leads</span>
           </h1>
 
-          <p className="text-base lg:text-lg leading-relaxed mb-10" style={{ color: '#7c6fa0' }}>
+          <p className="text-base lg:text-lg leading-relaxed mb-10" style={{ color: 'var(--text-secondary)' }}>
             Experience lead management like never before. A perfectly optimised
             workflow tailored for ambitious sales teams, wrapped in a stunning
             spatial interface.
@@ -129,14 +125,7 @@ export function LoginPage() {
         {/* Right — login card */}
         <div
           className="w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up"
-          style={{
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(139,92,246,0.2)',
-            backdropFilter: 'blur(32px)',
-            WebkitBackdropFilter: 'blur(32px)',
-            boxShadow:
-              '0 24px 64px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
-          }}
+          className="card"
         >
           {/* Card inner glow */}
           <div
@@ -158,10 +147,10 @@ export function LoginPage() {
               >
                 <Zap size={22} className="text-white" />
               </div>
-              <h2 className="text-2xl font-bold" style={{ color: '#f0eaff' }}>
+              <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
                 Welcome back
               </h2>
-              <p className="mt-1.5 text-sm" style={{ color: '#7c6fa0' }}>
+              <p className="mt-1.5 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 Sign in to your GigFlow account
               </p>
             </div>
@@ -176,7 +165,7 @@ export function LoginPage() {
                   <Mail
                     size={16}
                     className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                   />
                   <input
                     id="login-email"
@@ -202,7 +191,7 @@ export function LoginPage() {
                   <Lock
                     size={16}
                     className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                   />
                   <input
                     id="login-password"
@@ -215,7 +204,7 @@ export function LoginPage() {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3.5 top-1/2 -translate-y-1/2 transition-colors"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                     onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
                     onMouseLeave={e => (e.currentTarget.style.color = '#6b5f87')}
                   >
@@ -240,12 +229,12 @@ export function LoginPage() {
               </button>
             </form>
 
-            <p className="mt-6 text-center text-sm" style={{ color: '#6b5f87' }}>
+            <p className="mt-6 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
               Don't have an account?{' '}
               <Link
                 to="/register"
                 className="font-semibold transition-colors"
-                style={{ color: '#a78bfa' }}
+                style={{ color: 'var(--accent-violet)' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
                 onMouseLeave={e => (e.currentTarget.style.color = '#a78bfa')}
               >
@@ -261,12 +250,12 @@ export function LoginPage() {
                 border: '1px solid rgba(139,92,246,0.15)',
               }}
             >
-              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: '#6b5f87' }}>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'var(--text-muted)' }}>
                 Demo Credentials
               </p>
-              <div className="space-y-1 text-xs" style={{ color: '#a89cc8' }}>
-                <p><span className="font-semibold" style={{ color: '#c4b5fd' }}>Admin:</span> admin@gigflow.com / admin123</p>
-                <p><span className="font-semibold" style={{ color: '#c4b5fd' }}>Sales:</span> sales@gigflow.com / sales123</p>
+              <div className="space-y-1 text-xs" style={{ color: 'var(--text-secondary)' }}>
+                <p><span className="font-semibold" style={{ color: 'var(--accent-purple)' }}>Admin:</span> admin@gigflow.com / admin123</p>
+                <p><span className="font-semibold" style={{ color: 'var(--accent-purple)' }}>Sales:</span> sales@gigflow.com / sales123</p>
               </div>
             </div>
           </div>

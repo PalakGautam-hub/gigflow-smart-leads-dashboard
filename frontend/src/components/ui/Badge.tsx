@@ -59,11 +59,7 @@ export function SourceBadge({ source }: SourceBadgeProps) {
   return (
     <span
       className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"
-      style={{
-        background: 'rgba(139,92,246,0.12)',
-        color: '#a78bfa',
-        border: '1px solid rgba(139,92,246,0.2)',
-      }}
+      style={{ background: 'var(--border-glow)' }}
     >
       {source}
     </span>

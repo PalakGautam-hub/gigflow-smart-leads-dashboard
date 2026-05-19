@@ -66,10 +66,10 @@ export function LeadsPage() {
       {/* ── Page header ── */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-xl font-bold" style={{ color: '#f0eaff' }}>
+          <h2 className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
             Lead Management
           </h2>
-          <p className="text-sm mt-0.5" style={{ color: '#6b5f87' }}>
+          <p className="text-sm mt-0.5" style={{ color: 'var(--text-muted)' }}>
             {data?.pagination.total ?? 0} total leads
           </p>
         </div>
@@ -164,9 +164,9 @@ export function LeadsPage() {
 
       <Modal isOpen={!!deleteLead} onClose={() => setDeleteLead(null)} title="Delete Lead" maxWidth="max-w-md">
         <div className="space-y-5">
-          <p className="text-sm leading-relaxed" style={{ color: '#a89cc8' }}>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
             Are you sure you want to delete{' '}
-            <span className="font-semibold" style={{ color: '#e2d9f3' }}>{deleteLead?.name}</span>?{' '}
+            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>{deleteLead?.name}</span>?{' '}
             This action cannot be undone.
           </p>
           <div className="flex items-center justify-end gap-3">

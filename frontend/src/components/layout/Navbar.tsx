@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '@/store/auth.store';
-import { LayoutDashboard, Users, Menu, Zap, LogOut } from 'lucide-react';
+import { useThemeStore } from '@/store/theme.store';
+import { LayoutDashboard, Users, Menu, Zap, LogOut, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -10,6 +11,7 @@ interface NavbarProps {
 export function Navbar({ onMenuClick }: NavbarProps) {
   const location = useLocation();
   const { logout } = useAuthStore();
+  const { isDark, toggle: toggleTheme } = useThemeStore();
   const navigate = useNavigate();
 
   const navItems = [
@@ -37,7 +39,7 @@ export function Navbar({ onMenuClick }: NavbarProps) {
         <button
           onClick={onMenuClick}
           className="lg:hidden rounded-lg p-2 transition-colors"
-          style={{ color: '#7c6fa0' }}
+          style={{ color: 'var(--text-secondary)' }}
           onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
           onMouseLeave={e => (e.currentTarget.style.color = '#7c6fa0')}
           aria-label="Open menu"
@@ -56,8 +58,8 @@ export function Navbar({ onMenuClick }: NavbarProps) {
           >
             <Zap size={16} className="text-white" />
           </div>
-          <span className="text-base font-bold" style={{ color: '#f0eaff' }}>
-            Gig<span style={{ color: '#a78bfa' }}>Flow</span>
+          <span className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
+            Gig<span style={{ color: 'var(--accent-violet)' }}>Flow</span>
           </span>
         </div>
       </div>
@@ -110,30 +112,53 @@ export function Navbar({ onMenuClick }: NavbarProps) {
         })}
       </nav>
 
-      {/* Right — logout */}
-      <button
-        onClick={handleLogout}
-        className="flex items-center gap-2 rounded-full px-3 py-2 text-xs font-medium transition-all duration-200"
-        style={{
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          color: '#7c6fa0',
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.background = 'rgba(239,68,68,0.1)';
-          e.currentTarget.style.color = '#fca5a5';
-          e.currentTarget.style.borderColor = 'rgba(239,68,68,0.25)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.background = 'rgba(255,255,255,0.04)';
-          e.currentTarget.style.color = '#7c6fa0';
-          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
-        }}
-        aria-label="Sign out"
-      >
-        <LogOut size={15} />
-        <span className="hidden sm:inline">Sign out</span>
-      </button>
+      {/* Right — theme toggle + logout */}
+      <div className="flex items-center gap-2">
+        <button
+          onClick={toggleTheme}
+          className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200"
+          style={{
+            background: 'var(--bg-input)',
+            border: '1px solid var(--border-subtle)',
+            color: 'var(--text-secondary)',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.background = 'var(--bg-card-hover)';
+            e.currentTarget.style.color = 'var(--text-primary)';
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.background = 'var(--bg-input)';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }}
+          aria-label="Toggle theme"
+        >
+          {isDark ? <Sun size={15} /> : <Moon size={15} />}
+        </button>
+
+        <button
+          onClick={handleLogout}
+          className="flex h-9 items-center gap-2 rounded-full px-3 text-xs font-medium transition-all duration-200"
+          style={{
+            background: 'var(--bg-input)',
+            border: '1px solid var(--border-subtle)',
+            color: 'var(--text-secondary)',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.background = 'rgba(239,68,68,0.1)';
+            e.currentTarget.style.color = '#fca5a5';
+            e.currentTarget.style.borderColor = 'rgba(239,68,68,0.25)';
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.background = 'var(--bg-input)';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+            e.currentTarget.style.borderColor = 'var(--border-subtle)';
+          }}
+          aria-label="Sign out"
+        >
+          <LogOut size={15} />
+          <span className="hidden sm:inline">Sign out</span>
+        </button>
+      </div>
     </header>
   );
 }

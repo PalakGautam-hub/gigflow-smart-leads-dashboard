@@ -49,13 +49,7 @@ export function Modal({
       {/* Modal panel */}
       <div
         className={`relative w-full ${maxWidth} rounded-2xl animate-scale-in overflow-hidden`}
-        style={{
-          background: 'rgba(18, 12, 35, 0.96)',
-          border: '1px solid rgba(139, 92, 246, 0.25)',
-          backdropFilter: 'blur(32px)',
-          WebkitBackdropFilter: 'blur(32px)',
-          boxShadow: '0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(139,92,246,0.1), inset 0 1px 0 rgba(255,255,255,0.05)',
-        }}
+        className="card"
       >
         {/* Top glow */}
         <div
@@ -68,15 +62,15 @@ export function Modal({
         {/* Header */}
         <div
           className="relative flex items-center justify-between px-6 py-4"
-          style={{ borderBottom: '1px solid rgba(139,92,246,0.12)' }}
+          style={{ borderBottom: '1px solid var(--border-subtle)' }}
         >
-          <h2 className="text-base font-bold" style={{ color: '#e2d9f3' }}>
+          <h2 className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
             {title}
           </h2>
           <button
             onClick={onClose}
             className="flex items-center justify-center h-8 w-8 rounded-lg transition-all duration-200"
-            style={{ color: '#6b5f87' }}
+            style={{ color: 'var(--text-muted)' }}
             onMouseEnter={e => {
               e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
               e.currentTarget.style.color = '#f0eaff';

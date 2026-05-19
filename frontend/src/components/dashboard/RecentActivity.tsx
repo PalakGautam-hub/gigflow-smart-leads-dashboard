@@ -16,24 +16,20 @@ export function RecentActivity({ leads }: RecentActivityProps) {
     return (
       <div
         className="rounded-2xl overflow-hidden"
-        style={{
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(255,255,255,0.07)',
-          backdropFilter: 'blur(20px)',
-        }}
+        className="card"
       >
         <div
           className="px-6 py-4"
-          style={{ borderBottom: '1px solid rgba(139,92,246,0.12)' }}
+          style={{ borderBottom: '1px solid var(--border-subtle)' }}
         >
-          <h2 className="text-base font-semibold" style={{ color: '#e2d9f3' }}>
+          <h2 className="text-base font-semibold" style={{ color: 'var(--text-primary)' }}>
             Recent Activity
           </h2>
         </div>
         <EmptyState
           title="No recent activity"
           description="New leads will appear here."
-          icon={<Clock className="h-10 w-10" style={{ color: '#4a3f6b' }} />}
+          icon={<Clock className="h-10 w-10" style={{ color: 'var(--text-muted)' }} />}
         />
       </div>
     );
@@ -42,26 +38,18 @@ export function RecentActivity({ leads }: RecentActivityProps) {
   return (
     <div
       className="rounded-2xl overflow-hidden"
-      style={{
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.07)',
-        backdropFilter: 'blur(20px)',
-      }}
+      className="card"
     >
       <div
         className="px-6 py-4 flex items-center justify-between"
-        style={{ borderBottom: '1px solid rgba(139,92,246,0.12)' }}
+        style={{ borderBottom: '1px solid var(--border-subtle)' }}
       >
-        <h2 className="text-base font-semibold" style={{ color: '#e2d9f3' }}>
+        <h2 className="text-base font-semibold" style={{ color: 'var(--text-primary)' }}>
           Recent Activity
         </h2>
         <span
           className="text-xs font-medium px-2.5 py-1 rounded-full"
-          style={{
-            background: 'rgba(139,92,246,0.12)',
-            color: '#a78bfa',
-            border: '1px solid rgba(139,92,246,0.2)',
-          }}
+          style={{ background: 'var(--border-glow)' }}
         >
           {leads.length} leads
         </span>
@@ -96,10 +84,10 @@ export function RecentActivity({ leads }: RecentActivityProps) {
 
             {/* Info */}
             <div className="flex-1 min-w-0">
-              <p className="truncate text-sm font-semibold" style={{ color: '#e2d9f3' }}>
+              <p className="truncate text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
                 {lead.name}
               </p>
-              <p className="truncate text-xs mt-0.5" style={{ color: '#6b5f87' }}>
+              <p className="truncate text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
                 {lead.email}
               </p>
             </div>
@@ -107,7 +95,7 @@ export function RecentActivity({ leads }: RecentActivityProps) {
             {/* Badge + time */}
             <div className="flex flex-col items-end gap-1.5 flex-shrink-0">
               <StatusBadge status={lead.status} />
-              <span className="text-xs" style={{ color: '#4a3f6b' }}>
+              <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
                 {formatRelativeTime(lead.createdAt)}
               </span>
             </div>

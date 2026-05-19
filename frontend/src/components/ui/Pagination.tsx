@@ -47,7 +47,7 @@ export function Pagination({ pagination, onPageChange }: PaginationProps) {
 
   return (
     <div className="flex flex-col items-center justify-between gap-3 px-2 py-3 sm:flex-row">
-      <p className="text-xs" style={{ color: '#6b5f87' }}>
+      <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
         Showing{' '}
         <span style={{ color: '#c4b5fd', fontWeight: 600 }}>{start}</span>
         {' '}–{' '}
@@ -72,7 +72,7 @@ export function Pagination({ pagination, onPageChange }: PaginationProps) {
 
         {getVisiblePages().map((p, idx) =>
           typeof p === 'string' ? (
-            <span key={`dots-${idx}`} className="px-1 text-sm" style={{ color: '#4a3f6b' }}>…</span>
+            <span key={`dots-${idx}`} className="px-1 text-sm" style={{ color: 'var(--text-muted)' }}>…</span>
           ) : (
             <button
               key={p}

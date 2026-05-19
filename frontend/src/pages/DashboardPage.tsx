@@ -34,14 +34,14 @@ export function DashboardPage() {
                 border: '1px solid rgba(255,255,255,0.07)',
               }}
             >
-              <div className="px-6 py-4" style={{ borderBottom: '1px solid rgba(139,92,246,0.12)' }}>
+              <div className="px-6 py-4" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                 <Skeleton className="h-5 w-36" />
               </div>
               <div className="p-4 space-y-3">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div key={i} className="flex items-center gap-3 px-2 py-1">
                     <div className="h-10 w-10 rounded-full animate-pulse flex-shrink-0"
-                      style={{ background: 'rgba(139,92,246,0.12)' }} />
+                      style={{ background: 'var(--border-glow)' }} />
                     <div className="flex-1 space-y-2">
                       <Skeleton className="h-3.5 w-1/3" />
                       <Skeleton className="h-3 w-1/4" />
@@ -59,13 +59,9 @@ export function DashboardPage() {
         {/* Lead Distribution — 1/3 width */}
         <div
           className="rounded-2xl p-6"
-          style={{
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.07)',
-            backdropFilter: 'blur(20px)',
-          }}
+          className="card"
         >
-          <h3 className="text-base font-semibold mb-5" style={{ color: '#e2d9f3' }}>
+          <h3 className="text-base font-semibold mb-5" style={{ color: 'var(--text-primary)' }}>
             Lead Distribution
           </h3>
 
@@ -76,21 +72,21 @@ export function DashboardPage() {
                 return (
                   <div key={item.label}>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium" style={{ color: '#a89cc8' }}>
+                      <span className="text-xs font-medium" style={{ color: 'var(--text-secondary)' }}>
                         {item.label}
                       </span>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold" style={{ color: '#e2d9f3' }}>
+                        <span className="text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
                           {item.value}
                         </span>
-                        <span className="text-xs" style={{ color: '#4a3f6b' }}>
+                        <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
                           ({pct}%)
                         </span>
                       </div>
                     </div>
                     <div
                       className="h-1.5 rounded-full overflow-hidden"
-                      style={{ background: 'rgba(255,255,255,0.06)' }}
+                      style={{ background: 'var(--bg-card)' }}
                     >
                       <div
                         className="h-full rounded-full transition-all duration-700"
@@ -104,15 +100,12 @@ export function DashboardPage() {
               {/* Total callout */}
               <div
                 className="mt-6 rounded-xl p-4 text-center"
-                style={{
-                  background: 'rgba(139,92,246,0.08)',
-                  border: '1px solid rgba(139,92,246,0.15)',
-                }}
+                style={{ background: 'var(--glow-violet)' }}
               >
-                <p className="text-3xl font-extrabold" style={{ color: '#a78bfa' }}>
+                <p className="text-3xl font-extrabold" style={{ color: 'var(--accent-violet)' }}>
                   {stats.total}
                 </p>
-                <p className="text-xs mt-1" style={{ color: '#6b5f87' }}>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
                   Total Leads
                 </p>
               </div>

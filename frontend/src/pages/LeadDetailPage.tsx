@@ -40,7 +40,7 @@ export function LeadDetailPage() {
   if (error || !lead) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <p className="text-lg font-medium" style={{ color: '#e2d9f3' }}>Lead not found</p>
+        <p className="text-lg font-medium" style={{ color: 'var(--text-primary)' }}>Lead not found</p>
         <button onClick={() => navigate('/leads')} className="btn-primary mt-4">
           Back to Leads
         </button>
@@ -54,7 +54,7 @@ export function LeadDetailPage() {
       <button
         onClick={() => navigate('/leads')}
         className="flex items-center gap-2 text-sm font-medium transition-colors duration-200"
-        style={{ color: '#7c6fa0' }}
+        style={{ color: 'var(--text-secondary)' }}
         onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
         onMouseLeave={e => (e.currentTarget.style.color = '#7c6fa0')}
       >
@@ -82,10 +82,10 @@ export function LeadDetailPage() {
             {lead.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)}
           </div>
           <div className="flex-1">
-            <h2 className="text-xl font-bold" style={{ color: '#f0eaff' }}>
+            <h2 className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
               {lead.name}
             </h2>
-            <p className="mt-0.5 text-sm" style={{ color: '#6b5f87' }}>{lead.email}</p>
+            <p className="mt-0.5 text-sm" style={{ color: 'var(--text-muted)' }}>{lead.email}</p>
             <div className="mt-3 flex items-center gap-2 flex-wrap">
               <StatusBadge status={lead.status} />
               <SourceBadge source={lead.source} />
@@ -98,9 +98,9 @@ export function LeadDetailPage() {
       <div style={cardStyle}>
         <div
           className="px-6 py-4"
-          style={{ borderBottom: '1px solid rgba(139,92,246,0.12)' }}
+          style={{ borderBottom: '1px solid var(--border-subtle)' }}
         >
-          <h3 className="text-sm font-bold uppercase tracking-widest" style={{ color: '#6b5f87' }}>
+          <h3 className="text-sm font-bold uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
             Lead Details
           </h3>
         </div>
@@ -142,10 +142,10 @@ export function LeadDetailPage() {
                 <row.icon size={16} />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-0.5" style={{ color: '#4a3f6b' }}>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-0.5" style={{ color: 'var(--text-muted)' }}>
                   {row.label}
                 </p>
-                <p className="text-sm font-medium" style={{ color: '#e2d9f3' }}>
+                <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
                   {row.value}
                 </p>
               </div>

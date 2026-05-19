@@ -40,7 +40,7 @@ export function RegisterPage() {
   return (
     <div
       className="flex min-h-screen items-center justify-center relative overflow-hidden"
-      style={{ background: '#0d0a1a' }}
+      style={{ backgroundColor: 'var(--bg-base)' }}
     >
       {/* ── Background orbs ── */}
       <div
@@ -75,11 +75,7 @@ export function RegisterPage() {
         <div className="flex-1 text-center lg:text-left max-w-xl">
           <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
-            style={{
-              background: 'rgba(139,92,246,0.12)',
-              border: '1px solid rgba(139,92,246,0.3)',
-              color: '#a78bfa',
-            }}
+            style={{ background: 'var(--border-glow)' }}
           >
             <Zap size={12} />
             Join the Platform
@@ -102,10 +98,10 @@ export function RegisterPage() {
               Journey
             </span>
             <br />
-            <span style={{ color: '#c4b5fd' }}>Today</span>
+            <span style={{ color: 'var(--accent-purple)' }}>Today</span>
           </h1>
 
-          <p className="text-base lg:text-lg leading-relaxed mb-10" style={{ color: '#7c6fa0' }}>
+          <p className="text-base lg:text-lg leading-relaxed mb-10" style={{ color: 'var(--text-secondary)' }}>
             Start managing your leads today. Get real-time insights, track your
             pipeline progress, and close deals effortlessly in a stunning
             spatial environment.
@@ -131,14 +127,7 @@ export function RegisterPage() {
         {/* Right — register card */}
         <div
           className="w-full max-w-md rounded-3xl p-8 sm:p-10 animate-slide-up relative"
-          style={{
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(139,92,246,0.2)',
-            backdropFilter: 'blur(32px)',
-            WebkitBackdropFilter: 'blur(32px)',
-            boxShadow:
-              '0 24px 64px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
-          }}
+          className="card"
         >
           {/* Card inner glow */}
           <div
@@ -160,10 +149,10 @@ export function RegisterPage() {
               >
                 <Zap size={22} className="text-white" />
               </div>
-              <h2 className="text-2xl font-bold" style={{ color: '#f0eaff' }}>
+              <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
                 Create an account
               </h2>
-              <p className="mt-1.5 text-sm" style={{ color: '#7c6fa0' }}>
+              <p className="mt-1.5 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 Get started with GigFlow for free
               </p>
             </div>
@@ -178,7 +167,7 @@ export function RegisterPage() {
                   <User
                     size={16}
                     className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                   />
                   <input
                     id="register-name"
@@ -204,7 +193,7 @@ export function RegisterPage() {
                   <Mail
                     size={16}
                     className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                   />
                   <input
                     id="register-email"
@@ -230,7 +219,7 @@ export function RegisterPage() {
                   <Lock
                     size={16}
                     className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                   />
                   <input
                     id="register-password"
@@ -243,7 +232,7 @@ export function RegisterPage() {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3.5 top-1/2 -translate-y-1/2 transition-colors"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                     onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
                     onMouseLeave={e => (e.currentTarget.style.color = '#6b5f87')}
                   >
@@ -268,12 +257,12 @@ export function RegisterPage() {
               </button>
             </form>
 
-            <p className="mt-6 text-center text-sm" style={{ color: '#6b5f87' }}>
+            <p className="mt-6 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
               Already have an account?{' '}
               <Link
                 to="/login"
                 className="font-semibold transition-colors"
-                style={{ color: '#a78bfa' }}
+                style={{ color: 'var(--accent-violet)' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
                 onMouseLeave={e => (e.currentTarget.style.color = '#a78bfa')}
               >

@@ -74,14 +74,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             >
               <Zap size={18} className="text-white" />
             </div>
-            <span className="text-lg font-bold tracking-tight" style={{ color: '#f0eaff' }}>
-              Gig<span style={{ color: '#a78bfa' }}>Flow</span>
+            <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+              Gig<span style={{ color: 'var(--accent-violet)' }}>Flow</span>
             </span>
           </div>
           <button
             onClick={onClose}
             className="rounded-lg p-1.5 lg:hidden transition-colors"
-            style={{ color: '#6b5f87' }}
+            style={{ color: 'var(--text-muted)' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#f0eaff')}
             onMouseLeave={e => (e.currentTarget.style.color = '#6b5f87')}
           >
@@ -93,7 +93,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <nav className="flex-1 space-y-1 p-3 relative z-10 mt-2">
           <p
             className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-3"
-            style={{ color: '#4a3f6b' }}
+            style={{ color: 'var(--text-muted)' }}
           >
             Navigation
           </p>
@@ -157,10 +157,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               {user?.name.charAt(0).toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="truncate text-sm font-semibold" style={{ color: '#e2d9f3' }}>
+              <p className="truncate text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
                 {user?.name}
               </p>
-              <p className="truncate text-xs capitalize" style={{ color: '#6b5f87' }}>
+              <p className="truncate text-xs capitalize" style={{ color: 'var(--text-muted)' }}>
                 {user?.role}
               </p>
             </div>
@@ -168,7 +168,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               onClick={handleLogout}
               className="rounded-lg p-1.5 transition-all duration-200"
               title="Sign out"
-              style={{ color: '#6b5f87' }}
+              style={{ color: 'var(--text-muted)' }}
               onMouseEnter={e => {
                 e.currentTarget.style.color = '#fca5a5';
                 e.currentTarget.style.background = 'rgba(239,68,68,0.1)';

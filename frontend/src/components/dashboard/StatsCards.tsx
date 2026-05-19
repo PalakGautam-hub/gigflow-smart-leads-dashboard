@@ -80,7 +80,7 @@ export function StatsCards({ stats }: StatsCardsProps) {
 
           <div className="relative z-10 flex items-center justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#6b5f87' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: 'var(--text-muted)' }}>
                 {card.label}
               </p>
               <p className="text-4xl font-extrabold" style={{ color: card.accent }}>

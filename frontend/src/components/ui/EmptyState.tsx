@@ -17,14 +17,14 @@ export function EmptyState({
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center animate-fade-in">
       <div
         className="mb-5 rounded-2xl p-5"
-        style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.15)' }}
+        style={{ background: 'var(--glow-violet)' }}
       >
-        {icon || <Inbox className="h-10 w-10" style={{ color: '#6b5f87' }} />}
+        {icon || <Inbox className="h-10 w-10" style={{ color: 'var(--text-muted)' }} />}
       </div>
-      <h3 className="mb-2 text-base font-semibold" style={{ color: '#c4b5fd' }}>
+      <h3 className="mb-2 text-base font-semibold" style={{ color: 'var(--accent-purple)' }}>
         {title}
       </h3>
-      <p className="mb-6 max-w-xs text-sm" style={{ color: '#6b5f87' }}>
+      <p className="mb-6 max-w-xs text-sm" style={{ color: 'var(--text-muted)' }}>
         {description}
       </p>
       {action}

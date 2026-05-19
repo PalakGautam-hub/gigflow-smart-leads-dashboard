@@ -44,7 +44,7 @@ export function LeadFiltersBar({
           <Search
             size={16}
             className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
-            style={{ color: '#6b5f87' }}
+            style={{ color: 'var(--text-muted)' }}
           />
           <input
             type="text"
@@ -58,7 +58,7 @@ export function LeadFiltersBar({
 
         {/* Filter controls */}
         <div className="flex items-center gap-2 flex-wrap">
-          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest" style={{ color: '#4a3f6b' }}>
+          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
             <SlidersHorizontal size={14} />
             <span className="hidden sm:inline">Filters</span>
           </div>

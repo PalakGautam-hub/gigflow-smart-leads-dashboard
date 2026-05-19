@@ -63,14 +63,14 @@ export function LeadTable({ leads, onEdit, onDelete }: LeadTableProps) {
                   >
                     {lead.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)}
                   </div>
-                  <span className="font-semibold" style={{ color: '#e2d9f3' }}>
+                  <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
                     {lead.name}
                   </span>
                 </div>
               </td>
 
               {/* Email */}
-              <td className="px-4 py-3.5 hidden sm:table-cell" style={{ color: '#7c6fa0' }}>
+              <td className="px-4 py-3.5 hidden sm:table-cell" style={{ color: 'var(--text-secondary)' }}>
                 {lead.email}
               </td>
 
@@ -96,7 +96,7 @@ export function LeadTable({ leads, onEdit, onDelete }: LeadTableProps) {
                     onClick={() => navigate(`/leads/${lead._id}`)}
                     className="rounded-lg p-1.5 transition-all duration-200"
                     title="View lead"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                     onMouseEnter={e => { e.currentTarget.style.color = '#a78bfa'; e.currentTarget.style.background = 'rgba(139,92,246,0.1)'; }}
                     onMouseLeave={e => { e.currentTarget.style.color = '#6b5f87'; e.currentTarget.style.background = ''; }}
                   >
@@ -106,7 +106,7 @@ export function LeadTable({ leads, onEdit, onDelete }: LeadTableProps) {
                     onClick={() => onEdit(lead)}
                     className="rounded-lg p-1.5 transition-all duration-200"
                     title="Edit lead"
-                    style={{ color: '#6b5f87' }}
+                    style={{ color: 'var(--text-muted)' }}
                     onMouseEnter={e => { e.currentTarget.style.color = '#fcd34d'; e.currentTarget.style.background = 'rgba(245,158,11,0.1)'; }}
                     onMouseLeave={e => { e.currentTarget.style.color = '#6b5f87'; e.currentTarget.style.background = ''; }}
                   >
@@ -117,7 +117,7 @@ export function LeadTable({ leads, onEdit, onDelete }: LeadTableProps) {
                       onClick={() => onDelete(lead)}
                       className="rounded-lg p-1.5 transition-all duration-200"
                       title="Delete lead"
-                      style={{ color: '#6b5f87' }}
+                      style={{ color: 'var(--text-muted)' }}
                       onMouseEnter={e => { e.currentTarget.style.color = '#fca5a5'; e.currentTarget.style.background = 'rgba(239,68,68,0.1)'; }}
                       onMouseLeave={e => { e.currentTarget.style.color = '#6b5f87'; e.currentTarget.style.background = ''; }}
                     >
